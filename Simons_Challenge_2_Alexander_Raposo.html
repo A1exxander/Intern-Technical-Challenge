@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simon's Challenge 2</title>
+    <meta name ="description" content = "Challenge by Alexander Raposo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    h3 { 
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 5px;
+        padding: 5px;
+        height: 100vh;
+    }
+    
+    header {
+        grid-area: 1 / 1 / 2 / 7;
+        background-color: aqua;
+    }
+    
+    main {
+        grid-area: 2 / 1 / 7 / 5;
+        background-color: lightgreen;
+    }
+    
+    #aside-top {
+        grid-area: 2 / 5 / 4 / 7;
+        background-color: red;
+    }
+    
+    #aside-bottom {
+        grid-area: 4 / 5 / 7 / 7;
+        background-color: orange;
+    }
+    
+    footer {
+        grid-area: 7 / 1 / 9 / 7;
+        background-color: pink;
+    }
+    
+    @media (max-width: 1279px) {
+
+        main {
+            grid-column-end: 7;
+            grid-row-end: 6;
+        }
+    
+        #aside-top {
+            grid-area: 6 / 1 / 8 / 4;
+        }
+    
+        #aside-bottom {
+            grid-area: 6 / 4 / 8 / 7;
+        }
+    
+        footer {
+            grid-row-start: 8;
+            grid-row-end: 8;
+        }
+
+    }
+    
+    @media (max-width: 767px) {
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    
+        header {
+            height: 12vh;
+        }
+    
+        main {
+            height: 63vh;
+        }
+    
+        #aside-top {
+            height: 25vh;
+        }
+    
+        #aside-bottom {
+            height: 25vh;
+        }
+    
+        footer {
+            height: 12vh;
+        }
+
+    }
+</style>
+<body>
+    <header><h3>Header</h3></header>
+    <main><h3>Main</h3></main>
+    <aside id = "aside-top"><h3>Aside Top</h3></aside>
+    <aside id = "aside-bottom"><h3>Aside Bottom</h3></aside>
+    <footer><h3>Footer</h3></footer>
+</body>
+</html>
